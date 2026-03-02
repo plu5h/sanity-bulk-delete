@@ -14,8 +14,8 @@ You must have an API token from your sanity project with Read/Write access, and 
 
 
 ```js
-  //.env.local
-  SANITY_API_TOKEN="..."
+//.env.local
+SANITY_API_TOKEN="..."
    ```
 Modify client with your sanity project ID and dataset name :
 
@@ -30,14 +30,14 @@ export const client = createClient({
    ```
 Install Sanity CLI if not already done :
 ```sh
-   npm install --global sanity@latest
+npm install --global sanity@latest
 ```
 
 ## Usage
 
 Run :
 ```sh
-   sanity exec bulk_delete_script.js --with-user-token
+sanity exec bulk_delete_script.js --with-user-token
 ```
 
 You can alternatively run the script with node but I sometimes had fails due to Insufficient permissions; permission "update" required.
@@ -45,14 +45,14 @@ Running the script through sanity CLI with `--with-user-token` as above fix this
 
 Anyway if you want you can still run it with:
 ```sh
-  node delete_script.js
+node delete_script.js
 ```
 Or
 ```sh
-   chmod u+x bulk_delete_script.js
+chmod u+x bulk_delete_script.js
 ```
 ```sh
-   ./bulk_delete_script.js
+./bulk_delete_script.js
 ```
 Make sure you have the shebang line `#!/usr/bin/env node` at the top of your script
 
